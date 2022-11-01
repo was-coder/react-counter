@@ -1,26 +1,39 @@
-import React, { useState } from "react";
+import React, { useReducer } from "react";
+import reducer from "../hooks/Reduce";
+
+const initialstate = { count: 0 };
 
 function Counter() {
-  const [count, setValue] = useState(0);
-
   const COUNTSVALUE = [2, 3, 5, 10, 100];
 
   const handleDecrement = () => {
-    setValue((prev) => prev - 1);
+    dispatch({ type: "decrement" });
+  };
+
+  const handleExtraDecrement = (e) => {
+    const value = parseInt(e.target.id);
+    dispatch({ type: "extradecrement", value: value });
   };
 
   const handleReset = () => {
-    setValue(0);
+    dispatch({ type: "reset" });
   };
 
   const handleIncrement = () => {
-    setValue((prev) => prev + 1);
+    dispatch({ type: "increment" });
   };
+
+  const handleExtraIncrement = (e) => {
+    const value = parseInt(e.target.id);
+    dispatch({ type: "extraincrement", value: value });
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialstate);
 
   return (
     <>
       <div className="container">
-        <h1 className="count-result">Count : {count}</h1>
+        <h1 className="count-result">Count : {state.count}</h1>
         <div className="click-div">
           <div className="de-increment-div">
             <button type="button" className="btn" onClick={handleDecrement}>
@@ -32,7 +45,8 @@ function Counter() {
                   type="button"
                   key={value}
                   className="btn"
-                  onClick={() => setValue(count - value)}
+                  id={value}
+                  onClick={handleExtraDecrement}
                 >
                   -{value}
                 </button>
@@ -54,7 +68,8 @@ function Counter() {
                   type="button"
                   key={value}
                   className="btn"
-                  onClick={() => setValue(count + value)}
+                  id={value}
+                  onClick={handleExtraIncrement}
                 >
                   +{value}
                 </button>
