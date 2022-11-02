@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import { Helmet } from "react-helmet-async";
 import reducer from "../hooks/Reduce";
 
 const initialstate = { count: 0 };
@@ -32,6 +33,14 @@ function Counter() {
 
   return (
     <>
+      <Helmet>
+        <title>Counter</title>
+        <meta
+          name="description"
+          content="counter reader for increment, decrement and reseting counts"
+        />
+        <link rel="canonical" href="/" />
+      </Helmet>
       <div className="container">
         <h1 className="count-result">Count : {state.count}</h1>
         <div className="click-div">

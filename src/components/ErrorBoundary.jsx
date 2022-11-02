@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,17 +18,27 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.errorInfo) {
       return (
-        <div className="container error-boundary">
-          <h2>Something went wrong.</h2>
-          <h3 className="h3-bug">
-            Note: Bug is bugging you... check details below
-          </h3>
-          <details style={{ whiteSpace: "pre-wrap" }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo.componentStack}
-          </details>
-        </div>
+        <>
+          <Helmet>
+            <title>Error Boundary</title>
+            <meta
+              name="description"
+              content="This shows the error boundary of the counter application"
+            />
+          </Helmet>
+
+          <div className="container error-boundary">
+            <h2>Something went wrong.</h2>
+            <h3 className="h3-bug">
+              Note: Bug is bugging you... check details below
+            </h3>
+            <details style={{ whiteSpace: "pre-wrap" }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo.componentStack}
+            </details>
+          </div>
+        </>
       );
     }
     return this.props.children;
