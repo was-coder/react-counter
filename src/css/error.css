@@ -11,8 +11,16 @@
   padding: 20px 0;
 }
 
+.error-link {
+  color: #d0d5dd;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .error-link:hover {
   color: darkgoldenrod;
+  transition: all 1s ease-in-out;
 }
 
 .alert-div {

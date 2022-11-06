@@ -1,6 +1,7 @@
 .home-h1 {
-  font-size: 50px;
+  font-size: 30px;
   margin: 50px 0;
+  text-align: center;
 }
 
 span {
@@ -9,4 +10,10 @@ span {
 
 .home-btn {
   text-decoration: none;
+}
+
+@media screen and (min-width: 960px) {
+  .home-h1 {
+    font-size: 50px;
+  }
 }
