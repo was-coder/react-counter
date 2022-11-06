@@ -1,0 +1,33 @@
+.count-result {
+  font-size: 50px;
+}
+
+.click-div {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.de-increment-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: darkgoldenrod;
+  color: #fff;
+  margin: 0 20px;
+  border: 2px solid darkgoldenrod;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+  .btn {
+    font-size: 20px;
+  }
+}

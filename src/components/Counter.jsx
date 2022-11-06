@@ -39,7 +39,7 @@ function Counter() {
           name="description"
           content="counter reader for increment, decrement and reseting counts"
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="/counter" />
       </Helmet>
       <div className="container">
         <h1 className="count-result">Count : {state.count}</h1>

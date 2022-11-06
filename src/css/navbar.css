@@ -1,0 +1,29 @@
+.nav-container {
+  background-color: #b8c480;
+  position: fixed;
+  width: 100%;
+  min-height: 5vh;
+}
+
+.ul-link {
+  display: flex;
+  justify-content: center;
+}
+
+.li-link {
+  list-style-type: none;
+  padding: 10px 10px;
+}
+
+.links {
+  text-decoration: none;
+  color: #c36f09;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.links:hover {
+  color: #ffffff;
+  transition: all ease-in-out 0.5s;
+  border-bottom: 4px solid #c36f09;
+}

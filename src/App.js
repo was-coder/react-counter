@@ -1,14 +1,18 @@
 import React from "react";
-import ErrorBoundary from "./components/ErrorBoundary";
+import { ErrorBoundary } from "react-error-boundary";
+import { NavBar } from "./imports/Imports";
+import ErrorFallback from "./components/ErrorApp";
+
 import RouteLink from "./route/RouteLink";
 
 function App() {
   return (
-    <ErrorBoundary>
-      <>
+    <>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <NavBar />
         <RouteLink />
-      </>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </>
   );
 }
 
