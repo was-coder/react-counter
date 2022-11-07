@@ -42,7 +42,9 @@ function Counter() {
         <link rel="canonical" href="/counter" />
       </Helmet>
       <div className="container">
-        <h1 className="count-result">Count : {state.count}</h1>
+        <div className="count-container">
+          <h1 className="count-result">Count : {state.count}</h1>
+        </div>
         <div className="click-div">
           <div className="de-increment-div">
             <button type="button" className="btn" onClick={handleDecrement}>

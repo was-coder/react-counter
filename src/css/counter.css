@@ -1,3 +1,9 @@
+.count-container {
+  border: 10px solid #fff;
+  padding: 10px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
 .count-result {
   font-size: 50px;
 }
@@ -21,7 +27,7 @@
   color: #fff;
   margin: 0 20px;
   border: 2px solid darkgoldenrod;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   cursor: pointer;
 }
