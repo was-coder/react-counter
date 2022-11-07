@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# CountDApp Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is an AltSchool Examination project that deals with a counter application using custom hook useReducer, testing error boundaries, error pages with good SEO
 
-## Available Scripts
+![screenshot](No screenshot for)
 
-In the project directory, you can run:
+## Built With
 
-### `npm start`
+- Html,
+- Css,
+- Deploy with Netlify
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Live Demo Link](https://waslead.netlify.app/)
 
-### `npm test`
+### Development (Running locally)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone the project
 
-### `npm run build`
+```bash
+git clone https://github.com/was-coder/professional-portfolio.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Install Dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+To run StyleLint by itself, you may run the lint task:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run lint:check
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Or to automatically fix issues found (where possible):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run lint
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can also check against Prettier:
 
-## Learn More
+```bash
+npm run format:check
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+and to have it actually fix (to the best of its ability) any format issues, run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run format
+```
 
-### Code Splitting
+You can also check against HTML Validator:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run html-validator
+```
 
-### Analyzing the Bundle Size
+## Style Guides
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+- [Git Style Guide](https://udacity.github.io/git-styleguide/)
 
-### Making a Progressive Web App
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Github: [@was-coder](https://github.com/was-coder)
+- Twitter: [@DevWaslead](https://twitter.com/DevWaslead)
+- Linkedin: [@Adelakun-Wasiu](https://www.linkedin.com/in/adelakun-wasiu-1a2a5b1a6/)
 
-### Advanced Configuration
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions, issues and feature requests are welcome!
 
-### Deployment
+Feel free to check the [issues page](../../issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Show your support
 
-### `npm run build` fails to minify
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- https://github.com/adejam/html-and-css-templates/blob/main/README.md
+
+## 📝 License
+
+[MIT licensed](./LICENSE).

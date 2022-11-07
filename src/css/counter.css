@@ -1,11 +1,11 @@
 .count-container {
-  border: 10px solid #fff;
+  border: 7px solid #fff;
   padding: 10px;
   box-shadow: 10px 10px 8px #222;
 }
 
 .count-result {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .click-div {
@@ -33,6 +33,10 @@
 }
 
 @media screen and (min-width: 960px) {
+  .count-result {
+    font-size: 50px;
+  }
+
   .btn {
     font-size: 20px;
   }
