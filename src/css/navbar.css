@@ -1,29 +1,97 @@
 .nav-container {
-  background-color: #b8c480;
-  position: fixed;
   width: 100%;
-  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  background-color: #b8c480;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: fixed;
+  top: 5%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: block;
+  z-index: 1;
+}
+
+.hamburger:hover {
+  background-color: darkgoldenrod;
 }
 
 .ul-link {
-  display: flex;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
   justify-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: #b8c480;
+  border-top: 1px solid black;
+}
+
+.ul-link.removed {
+  display: none;
+  background: none;
+}
+
+.ul-link.expanded {
+  display: flex;
 }
 
 .li-link {
   list-style-type: none;
   padding: 10px 10px;
+  text-align: center;
 }
-
 .links {
   text-decoration: none;
-  color: #c36f09;
+  color: #000;
   font-size: 20px;
   font-weight: 600;
+  width: 100%;
+  padding: 1.5rem 0;
 }
 
 .links:hover {
-  color: #ffffff;
-  transition: all ease-in-out 0.5s;
-  border-bottom: 4px solid #c36f09;
+  color: darkgoldenrod;
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+
+  .ul-link {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 7vh;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: #b8c480;
+    border-top: none;
+  }
+
+  .li-link:hover {
+    transition: all ease-in-out 0.5s;
+    background: none;
+  }
+
+  .links:hover {
+    color: darkgoldenrod;
+  }
 }
