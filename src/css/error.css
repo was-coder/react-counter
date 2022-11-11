@@ -47,3 +47,7 @@ pre {
   margin-bottom: 10px;
   font-weight: 700;
 }
+
+.error-bomb {
+  color: darkgoldenrod;
+}

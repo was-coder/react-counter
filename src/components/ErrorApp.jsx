@@ -21,7 +21,7 @@ function Bomb({ value }) {
   }
 
   if (value !== "error") {
-    return `Please type error in the text field not ${value}`;
+    return `Please type error (small letter) in the text field`;
   }
   return null;
 }

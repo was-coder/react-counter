@@ -33,13 +33,14 @@
 }
 
 form {
-  /* display: flex; */
-  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
   margin-top: 10px;
 }
 
 .form-input {
-  /* padding-left: 10px; */
   border-radius: 10px;
   border: none;
   padding: 7px;
@@ -56,6 +57,10 @@ form {
 
   .btn {
     font-size: 20px;
+  }
+
+  form {
+    flex-direction: row;
   }
 
   .form-input {
