@@ -4,7 +4,7 @@
 
 # Application Screenshot
 
-![CoundDApp](./public/assets/Capture.PNG)
+![CoundDApp](./public/assets/countdapp.PNG)
 
 ## Built With
 
