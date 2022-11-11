@@ -1,10 +1,11 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import reducer from "../hooks/Reduce";
 
 const initialstate = { count: 0 };
 
 function Counter() {
+  const [value, setValue] = useState("");
   const COUNTSVALUE = [2, 3, 5, 10, 100];
 
   const handleDecrement = () => {
@@ -12,8 +13,8 @@ function Counter() {
   };
 
   const handleExtraDecrement = (e) => {
-    const value = parseInt(e.target.id);
-    dispatch({ type: "extradecrement", value: value });
+    const extraValue = parseInt(e.target.id);
+    dispatch({ type: "extradecrement", value: extraValue });
   };
 
   const handleReset = () => {
@@ -25,8 +26,18 @@ function Counter() {
   };
 
   const handleExtraIncrement = (e) => {
-    const value = parseInt(e.target.id);
-    dispatch({ type: "extraincrement", value: value });
+    const extraValue = e.target.id;
+    dispatch({ type: "extraincrement", extraValue: extraValue });
+  };
+
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleSetCount = (e) => {
+    e.preventDefault();
+    dispatch({ type: "setcounthandle", value: value });
+    setValue("");
   };
 
   const [state, dispatch] = useReducer(reducer, initialstate);
@@ -45,21 +56,36 @@ function Counter() {
         <div className="count-container">
           <h1 className="count-result">Count : {state.count}</h1>
         </div>
+        <div>
+          <form>
+            <input
+              placeholder={`Set a count`}
+              type="number"
+              id="value"
+              className="form-input"
+              value={value}
+              onChange={handleChange}
+            />
+            <button onClick={handleSetCount} className="btn form-btn">
+              SET COUNT
+            </button>
+          </form>
+        </div>
         <div className="click-div">
           <div className="de-increment-div">
             <button type="button" className="btn" onClick={handleDecrement}>
               DECREMENT
             </button>
-            {COUNTSVALUE.map((value) => {
+            {COUNTSVALUE.map((extraValue) => {
               return (
                 <button
                   type="button"
-                  key={value}
+                  key={extraValue}
                   className="btn"
-                  id={value}
+                  id={extraValue}
                   onClick={handleExtraDecrement}
                 >
-                  -{value}
+                  -{extraValue}
                 </button>
               );
             })}
@@ -73,16 +99,16 @@ function Counter() {
             <button type="button" className="btn" onClick={handleIncrement}>
               INCREMENT
             </button>
-            {COUNTSVALUE.map((value) => {
+            {COUNTSVALUE.map((extraValue) => {
               return (
                 <button
                   type="button"
-                  key={value}
+                  key={extraValue}
                   className="btn"
-                  id={value}
+                  id={extraValue}
                   onClick={handleExtraIncrement}
                 >
-                  +{value}
+                  +{extraValue}
                 </button>
               );
             })}

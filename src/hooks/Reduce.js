@@ -22,7 +22,12 @@ export default function reducer(state, action) {
 
     case "extraincrement":
       return {
-        count: state.count + action.value,
+        count: state.count + parseInt(action.extraValue),
+      };
+
+    case "setcounthandle":
+      return {
+        count: parseInt(action.value),
       };
 
     default:

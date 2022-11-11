@@ -11,7 +11,7 @@
 .click-div {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 25px;
 }
 
 .de-increment-div {
@@ -32,6 +32,23 @@
   cursor: pointer;
 }
 
+form {
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-top: 10px;
+}
+
+.form-input {
+  /* padding-left: 10px; */
+  border-radius: 10px;
+  border: none;
+  padding: 7px;
+}
+
+.form-btn {
+  padding: 5px;
+}
+
 @media screen and (min-width: 960px) {
   .count-result {
     font-size: 50px;
@@ -39,5 +56,14 @@
 
   .btn {
     font-size: 20px;
+  }
+
+  .form-input {
+    padding: 10px;
+  }
+
+  .form-btn {
+    padding: 7px;
+    font-size: 17px;
   }
 }
