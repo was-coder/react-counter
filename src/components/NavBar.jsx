@@ -1,6 +1,24 @@
 import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 
+const links = [
+  {
+    id: "home",
+    content: "Home",
+    to: "/",
+  },
+  {
+    id: "counter",
+    content: "Counter",
+    to: "/counter",
+  },
+  {
+    id: "error",
+    content: "Error Boundary",
+    to: "/error",
+  },
+];
+
 function NavBar() {
   const activeLink = ({ isActive }) => {
     return {
@@ -34,21 +52,18 @@ function NavBar() {
         </button>
         <div className="nav-link">
           <ul className={navExpanded ? "ul-link expanded" : "ul-link"}>
-            <li className="li-link">
-              <NavLink className="links" style={activeLink} to="/">
-                Home
-              </NavLink>
-            </li>
-            <li className="li-link">
-              <NavLink className="links" style={activeLink} to="/counter">
-                Counter
-              </NavLink>
-            </li>
-            <li className="li-link">
-              <NavLink className="links" style={activeLink} to="/error">
-                Error Boundary
-              </NavLink>
-            </li>
+            {links.map((links) => (
+              <li className="li-link">
+                <NavLink
+                  className="links"
+                  style={activeLink}
+                  to={links.to}
+                  key={links.id}
+                >
+                  {links.content}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
