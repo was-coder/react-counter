@@ -53,7 +53,12 @@ function NavBar() {
         <div className="nav-link">
           <ul className={navExpanded ? "ul-link expanded" : "ul-link"}>
             {links.map((links) => (
-              <li className="li-link">
+              <li
+                onClick={() => {
+                  setNavExpanded(!navExpanded);
+                }}
+                className="li-link"
+              >
                 <NavLink
                   className="links"
                   style={activeLink}
