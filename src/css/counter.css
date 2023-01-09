@@ -20,18 +20,6 @@
   gap: 10px;
 }
 
-.btn {
-  padding: 10px;
-  border-radius: 15px;
-  background-color: darkgoldenrod;
-  color: #fff;
-  margin: 0 20px;
-  border: 2px solid darkgoldenrod;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
 form {
   display: flex;
   flex-direction: column;

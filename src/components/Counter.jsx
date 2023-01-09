@@ -32,12 +32,17 @@ function Counter() {
 
   const handleChange = (e) => {
     setValue(e.target.value);
+    console.log(value);
   };
 
   const handleSetCount = (e) => {
     e.preventDefault();
     dispatch({ type: "setcounthandle", value: value });
     setValue("");
+    if (value === "") {
+      dispatch({ type: "setcounthandle", value: 0 });
+    }
+    console.log(value);
   };
 
   const [state, dispatch] = useReducer(reducer, initialstate);
