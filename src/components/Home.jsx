@@ -17,6 +17,14 @@ function Home() {
         <h1 className="home-h1">
           We <span>COUNT</span> on you to guide us
         </h1>
+        <p className="home-p">
+          This is a counter application that lets you count numbers from any
+          value you want. It allows you to{" "}
+          <span className="home-span">Set a count</span>,{" "}
+          <span className="home-span">Increase</span> and also{" "}
+          <span className="home-span">Decrease</span> a count with options for
+          increasing or decreasing by a value that are more than 1.
+        </p>
         <NavLink to="/counter" className="btn home-btn">
           Let's Count
         </NavLink>
